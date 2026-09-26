@@ -16,13 +16,22 @@ O projeto transforma o protótipo de baixa fidelidade fornecido pela instituiç�
 ## Estrutura
 
 ```
-├── index.html
+├── .github/
+│   └── workflows/
+│       └── ci.yml            # Validação automática de HTML e CSS
+├── assets/
+│   └── imagens/
+│       ├── aluno-com-livros.png
+│       └── logo-unifecaf.png
 ├── css/
-│   └── style.css
-└── assets/
-    └── imagens/
-        ├── logo-unifecaf.png
-        └── aluno-com-livros.png
+│   └── style.css             # Estilos da página
+├── index.html                # Estrutura da página
+├── .htmlvalidate.json        # Regras do html-validate
+├── .stylelintrc.json         # Regras do Stylelint
+├── .gitignore
+├── package.json              # Ferramentas de validação e scripts
+├── package-lock.json
+└── README.md
 ```
 
 ## Identidade visual
