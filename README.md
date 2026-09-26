@@ -49,12 +49,9 @@ O CSS foi escrito com abordagem **mobile-first** e media queries em dois pontos 
 - **A partir de 640px (tablet)**: as listas voltam a ser grades, com quatro categorias e dois livros por linha.
 - **A partir de 1024px (desktop)**: navegação em linha no cabeçalho, destaque em duas colunas, três livros por linha e serviços em duas colunas.
 
-## CI/CD
+## Integração contínua
 
-O projeto usa GitHub Actions (`.github/workflows/ci-cd.yml`) com duas etapas:
-
-- **Validação (CI)**: a cada push e pull request, o HTML é verificado com [html-validate](https://html-validate.org/) e o CSS com [Stylelint](https://stylelint.io/), usando o conjunto de regras padrão.
-- **Publicação (CD)**: quando a validação passa na branch `main`, o site é publicado automaticamente no GitHub Pages.
+O projeto usa GitHub Actions (`.github/workflows/ci.yml`): a cada push e pull request na branch `main`, o HTML é verificado com [html-validate](https://html-validate.org/) e o CSS com [Stylelint](https://stylelint.io/), usando o conjunto de regras padrão.
 
 ## Boas práticas aplicadas
 
