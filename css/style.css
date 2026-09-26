@@ -500,72 +500,40 @@ address {
   color: var(--green);
 }
 
-/* Estante ilustrativa */
+/* Foto do hero */
 .hero-visual {
   position: relative;
-  max-width: 440px;
+  max-width: 300px;
   width: 100%;
   margin-inline: auto;
 }
 
 /* Moldura com cantos opostos recortados, como no logo */
-.shelf-frame {
-  position: relative;
-  padding: 12% 10% 10%;
+.photo-frame {
+  margin: 0;
   border: 14px solid var(--white);
   clip-path: polygon(14% 0, 100% 0, 100% 86%, 86% 100%, 0 100%, 0 14%);
-  background: var(--navy-deep);
-}
-
-.shelf {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 4px;
-  height: 220px;
-}
-
-.spine {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 13%;
-  border-radius: 3px 3px 0 0;
-  box-shadow: inset -4px 0 0 rgba(0, 0, 0, 0.12);
-}
-
-.spine span {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  max-height: 85%;
-}
-
-.spine-a { height: 82%; background: #e8ecf5; color: var(--navy); }
-.spine-b { height: 70%; background: var(--navy-soft); color: #c9d3ea; }
-.spine-c { height: 92%; background: #ffffff; color: var(--navy); }
-.spine-d { height: 76%; background: #2f4a8a; color: #e8ecf5; }
-.spine-f { height: 86%; background: #cfd8ea; color: var(--navy); }
-.spine-g { height: 66%; background: var(--navy-soft); color: #c9d3ea; }
-
-/* O livro verde, "retirado" da estante, é o quadrado verde do logo */
-.spine-e {
-  height: 100%;
-  width: 16%;
-  background: var(--green);
-  color: var(--navy-deep);
-  transform: translateY(-14%) rotate(-6deg);
-  transform-origin: bottom left;
-}
-
-.shelf-base {
-  height: 8px;
   background: var(--white);
-  border-radius: 2px;
+}
+
+.photo-frame img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Quadrado verde do logo, "encaixado" no canto da moldura */
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -14px;
+  right: -14px;
+  width: 56px;
+  height: 56px;
+  background: var(--green);
+  border-radius: 4px;
 }
 
 .reading-card {
@@ -1004,11 +972,8 @@ address {
   }
 
   .hero-visual {
+    max-width: 400px;
     margin-inline: auto 0;
-  }
-
-  .shelf {
-    height: 260px;
   }
 
   .reading-card {
